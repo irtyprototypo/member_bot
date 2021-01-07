@@ -1,0 +1,12 @@
+{
+	"token": "long string from discord",
+	"ownerID":	"discord id number",
+	"prefix": "!",
+	"twitterHandle": "twitter handle used to fetch tweets",
+	"twitterPsw": "password for said twitter account",
+	"twitterAPIKey": "key from twitter",
+	"twitterAPIKeySec": "key from twitter",
+	"twitterAToken": "token from twitter",
+	"twitterATokenSec": "token from twitter"
+}
+
