@@ -7,7 +7,9 @@ this.run = async (client, message, args) => {
 			.then(()=>{
 				message.channel.send(message.member.displayName + " kicked himself 😂");
 			})
-			.catch( err => { console.log("ERROR: " + err.message + ". in !kick"); });
+			.catch( (err) => {
+	       		console.log("ERROR: " + err.message + ". in !kick");
+			});
 
 	user = message.mentions.users.get(user);
 	// console.log(user);
@@ -17,5 +19,8 @@ this.run = async (client, message, args) => {
 				console.log("Kicked " + user + ": " + kickReason)	
 				message.channel.send(message.member.displayName + " kicked " + user.username);
 			})
-			.catch( err => { console.log("ERROR: " + err.message + ". in !kick"); });
+			.catch( (err) => {
+		       console.log("ERROR: " + err.message + ". in !kick");
+			});
+
 }

@@ -4,8 +4,10 @@ this.run = async (client, message, args) => {
   let currency = new String(args[0]).toUpperCase();
 
   fetch(api_url)
-    .then( response => { return response.json(); })
-    .then( data => {
+    .then( (response) => {
+      return response.json();
+    })
+    .then( (data) => {
       // console.log(data);
       if(!args[0])
         currency = "USD";
@@ -16,5 +18,7 @@ this.run = async (client, message, args) => {
       // console.log("Current price per bitcoin: $" + formattedResult + " (" + currency + ").");
       message.channel.send("Current price per bitcoin: $" + formattedResult + " (" + currency + ").");
     })
-    .catch( err => { console.log("ERROR: " + err.message); });
+    .catch( (err) => {
+      console.log("ERROR: " + err.message);
+    });
 };

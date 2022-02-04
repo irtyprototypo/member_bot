@@ -5,9 +5,9 @@ this.run = async (client, message, args) => {
     deleteCount = args[0];
     deleteCount++;
   }
-  const MAX = 5;
+  const MAX = 11;
   if (!deleteCount || deleteCount < 0 || deleteCount > (MAX+1))
-    return message.reply('Please provide a number between 0 and ' + MAX + ' for the number of messages to delete');
+    return message.reply('Please provide a number between 0 and ' + (MAX-1) + ' for the number of messages to delete');
 
   const fetched = await message.channel.messages.fetch({
     limit: deleteCount,

@@ -31,4 +31,6 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
+// fs.writeFile('commands.txt', client.commands);
+
 client.login(client.config.token);

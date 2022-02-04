@@ -16,12 +16,13 @@ module.exports = async (client, message) => {
     message.react(message.guild.emojis.cache.find(emoji => emoji.name === 'implying'));         // implying constanza 614253196453347338
 
   if(mem.includes("imagin") || mem.includes("think") || mem.includes(":thinking:") || mem.includes("🤔"))
-    message.react("🤔");                                                                         // imagining
-
+    setTimeout(_=>{message.react("🤔");}, 9 * 1000)				// imagining
 
   // no prefix
   if (message.content.indexOf(client.config.prefix) !== 0)
-    return;
+    if (message.channel.name.includes("bot-spam"))
+      client.commands.get('checkem').run(client, message, null);
+    // return;
 
 
   let exit = false;

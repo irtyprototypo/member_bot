@@ -1,5 +1,7 @@
+const storage = require('node-persist');
 const fs = require("fs");
 let  blackList = [];
+// const imretarded = ":365920769663959040:";
 let file = './data/BlackList.txt';
 
 this.run = async (client, message, args) => {
@@ -13,6 +15,7 @@ const imretarded = message.guild.emojis.cache.find(emoji => emoji.name === 'imre
     let splitted = str.split("\n");
     if(splitted[0] !== "")
       blackList = splitted;
+  
   });
 
 
@@ -82,5 +85,6 @@ const imretarded = message.guild.emojis.cache.find(emoji => emoji.name === 'imre
       });
     });
   }
+
 };
 
